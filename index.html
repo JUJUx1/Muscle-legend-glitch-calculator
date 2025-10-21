@@ -17,13 +17,9 @@
     --border-radius: 12px;
     --transition: all 0.3s ease;
   }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
   body {
     font-family: 'Poppins', sans-serif;
     background: var(--bg-dark);
@@ -33,293 +29,148 @@
     align-items: center;
     padding: 20px;
     min-height: 100vh;
-    background-image: radial-gradient(circle at 15% 50%, rgba(0, 255, 183, 0.1) 0%, transparent 20%),
-                      radial-gradient(circle at 85% 30%, rgba(0, 255, 183, 0.05) 0%, transparent 20%),
-                      radial-gradient(circle at 50% 80%, rgba(0, 255, 183, 0.05) 0%, transparent 20%);
+    background-image: radial-gradient(circle at 15% 50%, rgba(0,255,183,0.1) 0%, transparent 20%),
+                      radial-gradient(circle at 85% 30%, rgba(0,255,183,0.05) 0%, transparent 20%),
+                      radial-gradient(circle at 50% 80%, rgba(0,255,183,0.05) 0%, transparent 20%);
   }
-  
-  .container {
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  header {
-    text-align: center;
-    margin-bottom: 25px;
-    width: 100%;
-  }
-  
-  h1 {
-    color: var(--primary);
-    font-size: 1.8em;
-    margin-bottom: 8px;
-    text-shadow: 0 0 10px rgba(0, 255, 183, 0.3);
-  }
-  
-  .subtitle {
-    color: rgba(241, 241, 241, 0.7);
-    font-size: 0.9em;
-  }
-  
-  .card {
+
+  .container { width:100%; max-width:600px; display:flex; flex-direction:column; align-items:center; }
+
+  header { text-align:center; margin-bottom:25px; width:100%; }
+  h1 { color: var(--primary); font-size:1.8em; margin-bottom:8px; text-shadow:0 0 10px rgba(0,255,183,0.3); }
+  .subtitle { color: rgba(241,241,241,0.7); font-size:0.9em; }
+
+  .card, .result {
     background: var(--bg-card);
     border-radius: var(--border-radius);
     padding: 20px;
     width: 100%;
     margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.05);
   }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 500;
-    color: rgba(241, 241, 241, 0.9);
-  }
-  
+
+  .form-group { margin-bottom: 15px; }
+  label { display:block; margin-bottom:6px; font-weight:500; color: rgba(241,241,241,0.9); }
   select, input {
-    width: 100%;
-    margin: 0;
-    padding: 12px 15px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(0, 0, 0, 0.3);
+    width:100%;
+    padding:12px 15px;
+    border-radius:8px;
+    border:1px solid rgba(255,255,255,0.1);
+    background: rgba(0,0,0,0.3);
     color: var(--text-light);
-    font-size: 1em;
+    font-size:1em;
     transition: var(--transition);
   }
-  
-  select:focus, input:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(0, 255, 183, 0.2);
-  }
-  
+  select:focus, input:focus { outline:none; border-color:var(--primary); box-shadow:0 0 0 2px rgba(0,255,183,0.2); }
+
   button {
-    margin-top: 10px;
-    padding: 14px 24px;
+    margin-top:10px;
+    padding:14px 24px;
     background: var(--primary);
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1em;
-    width: 100%;
+    color:#000;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:1em;
+    width:100%;
     transition: var(--transition);
-    box-shadow: 0 4px 10px rgba(0, 255, 183, 0.2);
+    box-shadow:0 4px 10px rgba(0,255,183,0.2);
   }
-  
-  button:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 255, 183, 0.3);
-  }
-  
-  button:active {
-    transform: translateY(0);
-  }
-  
-  .result {
-    margin-top: 20px;
-    padding: 20px;
-    background: var(--bg-card);
-    border-radius: var(--border-radius);
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-  }
-  
-  .result-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .xp-display {
-    background: rgba(0, 255, 183, 0.1);
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-weight: 600;
-    color: var(--primary);
-  }
-  
-  .good {
-    color: var(--success);
-    font-weight: bold;
-    background: rgba(0, 255, 127, 0.1);
-    padding: 10px;
-    border-radius: 8px;
-    margin: 8px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .bad {
-    color: var(--error);
-    padding: 15px;
-    border-radius: 8px;
-    background: rgba(255, 79, 79, 0.1);
-  }
-  
-  .levels-container {
-    max-height: 300px;
-    overflow-y: auto;
-    margin-top: 15px;
-  }
-  
-  .level-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 15px;
-    margin: 5px 0;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 8px;
-    transition: var(--transition);
-  }
-  
-  .level-item:hover {
-    background: rgba(255, 255, 255, 0.06);
-  }
-  
-  .level-info {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .level-name {
-    font-weight: 600;
-  }
-  
-  .level-details {
-    font-size: 0.85em;
-    color: rgba(241, 241, 241, 0.7);
-  }
-  
-  .level-hits {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    color: var(--primary);
-  }
-  
-  .glitch-indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--success);
-    margin-right: 8px;
-    animation: pulse 2s infinite;
-  }
-  
-  @keyframes pulse {
-    0% { opacity: 0.6; }
-    50% { opacity: 1; }
-    100% { opacity: 0.6; }
-  }
-  
-  .footer {
-    margin-top: 20px;
-    text-align: center;
-    color: rgba(241, 241, 241, 0.5);
-    font-size: 0.8em;
-  }
-  
-  @media (max-width: 480px) {
-    body {
-      padding: 15px;
-    }
-    
-    h1 {
-      font-size: 1.5em;
-    }
-    
-    .card, .result {
-      padding: 15px;
-    }
+  button:hover { background: var(--primary-dark); transform:translateY(-2px); box-shadow:0 6px 15px rgba(0,255,183,0.3); }
+  button:active { transform:translateY(0); }
+
+  .result-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; padding-bottom:10px; border-bottom:1px solid rgba(255,255,255,0.1); }
+  .xp-display { background: rgba(0,255,183,0.1); padding:8px 15px; border-radius:20px; font-weight:600; color: var(--primary); }
+
+  .good { color: var(--success); font-weight:bold; background: rgba(0,255,127,0.1); padding:10px; border-radius:8px; margin:8px 0; display:flex; align-items:center; justify-content:center; gap:10px; }
+  .bad { color: var(--error); padding:15px; border-radius:8px; background: rgba(255,79,79,0.1); }
+
+  .levels-container { max-height: 250px; overflow-y:auto; margin-top:15px; }
+  .level-item { display:flex; justify-content:space-between; padding:10px 15px; margin:5px 0; background: rgba(255,255,255,0.03); border-radius:8px; transition:var(--transition); }
+  .level-item:hover { background: rgba(255,255,255,0.06); }
+  .level-info { display:flex; flex-direction:column; }
+  .level-name { font-weight:600; }
+  .level-details { font-size:0.85em; color: rgba(241,241,241,0.7); }
+  .level-hits { display:flex; align-items:center; font-weight:600; color: var(--primary); }
+  .glitch-indicator { width:10px; height:10px; border-radius:50%; background: var(--success); margin-right:8px; animation:pulse 2s infinite; }
+  @keyframes pulse { 0%{opacity:0.6;}50%{opacity:1;}100%{opacity:0.6;} }
+
+  .footer { margin-top:20px; text-align:center; color: rgba(241,241,241,0.5); font-size:0.8em; }
+
+  @media (max-width:480px){
+    body { padding:15px; }
+    h1 { font-size:1.5em; }
+    .card, .result { padding:15px; }
   }
 </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>🐾 Muscle Legends Glitch Level Finder (v2)</h1>
-      <p class="subtitle">Find the perfect levels for XP glitching</p>
-    </header>
-    
-    <div class="card">
-      <div class="form-group">
-        <label for="rebirths">Rebirths:</label>
-        <input type="number" id="rebirths" value="8" min="0">
-      </div>
-      
-      <div class="form-group">
-        <label for="rock">Rock Type:</label>
-        <select id="rock">
-          <option value="0.025">Tiny Rock (0.025)</option>
-          <option value="0.05">Punching Rock (0.05)</option>
-          <option value="0.075">Large Rock (0.075)</option>
-          <option value="0.2" selected>Golden Rock (0.2)</option>
-          <option value="0.375">Frozen Rock (0.375)</option>
-          <option value="0.75">Mystic Rock (0.75)</option>
-          <option value="1.125">Inferno Rock (1.125)</option>
-          <option value="2.5">Legends Rock (2.5)</option>
-          <option value="12.5">Muscle King (12.5)</option>
-          <option value="16.25">Ancient Jungle (16.25)</option>
-        </select>
-      </div>
-      
-      <div class="form-group">
-        <label for="rarity">Pet Rarity:</label>
-        <select id="rarity">
-          <option value="basic">Basic</option>
-          <option value="advanced">Advanced</option>
-          <option value="rare">Rare</option>
-          <option value="epic">Epic</option>
-          <option value="unique" selected>Unique</option>
-        </select>
-      </div>
-      
-      <button onclick="findGlitch()">Find Glitchable Levels</button>
+<div class="container">
+  <header>
+    <h1>🐾 Muscle Legends Glitch Level Finder (v2)</h1>
+    <p class="subtitle">Find the perfect levels for XP glitching</p>
+  </header>
+
+  <div class="card">
+    <div class="form-group">
+      <label for="rebirths">Rebirths:</label>
+      <input type="number" id="rebirths" value="8" min="0">
     </div>
-    
-    <div class="result" id="output">
-      <div class="result-header">
-        <h2>Results</h2>
-        <div class="xp-display" id="xpDisplay">XP/Hit: 0</div>
-      </div>
-      <div id="resultsContent">
-        <p>Configure your settings and click "Find Glitchable Levels" to see results.</p>
-      </div>
+
+    <div class="form-group">
+      <label for="rock">Rock Type:</label>
+      <select id="rock">
+        <option value="0.025">Tiny Rock (0.025)</option>
+        <option value="0.05">Punching Rock (0.05)</option>
+        <option value="0.075">Large Rock (0.075)</option>
+        <option value="0.2" selected>Golden Rock (0.2)</option>
+        <option value="0.375">Frozen Rock (0.375)</option>
+        <option value="0.75">Mystic Rock (0.75)</option>
+        <option value="1.125">Inferno Rock (1.125)</option>
+        <option value="2.5">Legends Rock (2.5)</option>
+        <option value="12.5">Muscle King (12.5)</option>
+        <option value="16.25">Ancient Jungle (16.25)</option>
+      </select>
     </div>
-    
-    <div class="footer">
-      <p>Muscle Legends Glitch Finder v2.0</p>
+
+    <div class="form-group">
+      <label for="rarity">Pet Rarity:</label>
+      <select id="rarity">
+        <option value="basic">Basic</option>
+        <option value="advanced">Advanced</option>
+        <option value="rare">Rare</option>
+        <option value="epic">Epic</option>
+        <option value="unique" selected>Unique</option>
+      </select>
+    </div>
+
+    <button onclick="findGlitch()" aria-label="Find glitchable levels">Find Glitchable Levels</button>
+  </div>
+
+  <div class="result" id="output">
+    <div class="result-header">
+      <h2>Results</h2>
+      <div class="xp-display" id="xpDisplay">XP/Hit: 0</div>
+    </div>
+    <div id="resultsContent">
+      <p>Configure your settings and click "Find Glitchable Levels" to see results.</p>
     </div>
   </div>
 
+  <div class="footer">
+    <p>Muscle Legends Glitch Finder v2.0</p>
+  </div>
+</div>
+
 <script>
-// XP per level (NOT cumulative)
 const xpTables = {
   basic:    [250,500,750,1000,1250,1500,1750,2000,2250,2500,2750,3000,3250,3500,3750,4000,4250,4500,4750,5000],
   advanced: [500,1000,1500,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000,7500,8000,8500,9000,9500,10000],
   rare:     [750,1500,2250,3000,3750,4500,5250,6000,6750,7500,8250,9000,9750,10500,11250,12000,12750,13500,14250,15000],
   epic:     [1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000,16000,17000,18000,19000,20000],
-  unique:   Array.from({length: 20}, (_, i) => 1250 * (i + 1)) // 1250, 2500, 3750, 5000, ...
+  unique:   Array.from({length: 20}, (_, i) => 1250*(i+1))
 };
 
 function findGlitch() {
@@ -328,45 +179,35 @@ function findGlitch() {
   const rarity = document.getElementById("rarity").value;
   const output = document.getElementById("resultsContent");
   const xpDisplay = document.getElementById("xpDisplay");
-  
-  // XP gained per hit formula
+
+  // Save to localStorage
+  localStorage.setItem('mlSettings', JSON.stringify({ rebirths, rock: rockVal, rarity }));
+
+  // XP gained per hit
   const xpPerHit = (rebirths + 20) * rockVal;
-  
-  // Update XP display
-  xpDisplay.textContent = `XP/Hit: ${xpPerHit.toFixed(3)}`;
-  
-  // Calculate total cumulative XP
+  xpDisplay.textContent = `XP/Hit: ${xpPerHit.toFixed(2)}`;
+
+  // Cumulative XP
   const perLevel = xpTables[rarity];
   let totalXP = [];
   let sum = 0;
-  for (let i = 0; i < perLevel.length; i++) {
+  for(let i=0; i<perLevel.length; i++) {
     sum += perLevel[i];
     totalXP.push(sum);
   }
-  
-  // Build display
-  let html = `<p><b>Checking ${rarity.toUpperCase()} pet levels:</b></p>`;
-  
-  let found = false;
-  let glitchLevels = [];
-  
-  for (let lvl = 0; lvl < totalXP.length; lvl++) {
-    const xp = totalXP[lvl];
-    const ratio = xp / xpPerHit;
-    const isInt = Math.abs(ratio - Math.round(ratio)) < 1e-6;
-    if (isInt) {
-      glitchLevels.push({
-        level: lvl + 1,
-        totalXP: xp,
-        hits: Math.round(ratio)
-      });
-      found = true;
-    }
-  }
 
-  if (found) {
+  let html = `<p><b>Checking ${rarity.toUpperCase()} pet levels:</b></p>`;
+  let glitchLevels = totalXP.map((xp, idx)=>{
+    const ratio = xp / xpPerHit;
+    if(Math.abs(ratio - Math.round(ratio)) < 1e-6) {
+      return { level: idx+1, totalXP: xp, hits: Math.round(ratio) };
+    }
+    return null;
+  }).filter(Boolean);
+
+  if(glitchLevels.length){
     html += `<div class="levels-container">`;
-    glitchLevels.forEach(item => {
+    glitchLevels.forEach(item=>{
       html += `
         <div class="level-item">
           <div class="level-info">
@@ -384,12 +225,18 @@ function findGlitch() {
   } else {
     html += `<div class="bad">❌ No glitchable levels found for this setup.</div>`;
   }
-  
+
   output.innerHTML = html;
 }
 
-// Initialize with default values
-window.onload = function() {
+// Load saved settings
+window.onload = function(){
+  const saved = JSON.parse(localStorage.getItem('mlSettings'));
+  if(saved){
+    document.getElementById('rebirths').value = saved.rebirths;
+    document.getElementById('rock').value = saved.rock;
+    document.getElementById('rarity').value = saved.rarity;
+  }
   findGlitch();
 };
 </script>
