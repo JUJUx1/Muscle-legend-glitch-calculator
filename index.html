@@ -3,242 +3,129 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muscle Legends Glitch Finder (v2)</title>
+<title>Muscle Legends Glitch Finder (Bullet TXT)</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Logo Links Section -->
+<div class="logo-links">
+    <!-- Instagram Logo -->
+    <a href="https://www.instagram.com/j_u_j_u_1_9_3?igsh=MWx1eDRkZ2RkNnB3Mw==" target="_blank">
+        <img src="2.png" 
+             alt="Instagram" width="50" height="50">
+    </a>
+
+    <!-- Legend of Speed Logo -->
+    <a href="https://jujux1.github.io/Legend-of-speed-pet-glitch-calculator/" target="_blank">
+        <img src="1.png" width="50" height="50">
+    </a>
+</div>
 <style>
-  :root {
-    --primary: #00ffb7;
-    --primary-dark: #00d5a0;
-    --bg-dark: #0d1117;
-    --bg-card: #151b23;
-    --text-light: #f1f1f1;
-    --success: #00ff7f;
-    --error: #ff4f4f;
-    --border-radius: 12px;
-    --transition: all 0.3s ease;
-  }
-
-  * { margin:0; padding:0; box-sizing:border-box; }
-
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--bg-dark);
-    color: var(--text-light);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    min-height: 100vh;
-    background-image: radial-gradient(circle at 15% 50%, rgba(0,255,183,0.1) 0%, transparent 20%),
-                      radial-gradient(circle at 85% 30%, rgba(0,255,183,0.05) 0%, transparent 20%),
-                      radial-gradient(circle at 50% 80%, rgba(0,255,183,0.05) 0%, transparent 20%);
-  }
-
-  .container { width:100%; max-width:600px; display:flex; flex-direction:column; align-items:center; }
-
-  header { text-align:center; margin-bottom:25px; width:100%; }
-  h1 { color: var(--primary); font-size:1.8em; margin-bottom:8px; text-shadow:0 0 10px rgba(0,255,183,0.3); }
-  .subtitle { color: rgba(241,241,241,0.7); font-size:0.9em; }
-
-  .card, .result {
-    background: var(--bg-card);
-    border-radius: var(--border-radius);
-    padding: 20px;
-    width: 100%;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    border: 1px solid rgba(255,255,255,0.05);
-  }
-
-  .form-group { margin-bottom: 15px; }
-  label { display:block; margin-bottom:6px; font-weight:500; color: rgba(241,241,241,0.9); }
-  select, input {
-    width:100%;
-    padding:12px 15px;
-    border-radius:8px;
-    border:1px solid rgba(255,255,255,0.1);
-    background: rgba(0,0,0,0.3);
-    color: var(--text-light);
-    font-size:1em;
-    transition: var(--transition);
-  }
-  select:focus, input:focus { outline:none; border-color:var(--primary); box-shadow:0 0 0 2px rgba(0,255,183,0.2); }
-
-  button {
-    margin-top:10px;
-    padding:14px 24px;
-    background: var(--primary);
-    color:#000;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
-    font-size:1em;
-    width:100%;
-    transition: var(--transition);
-    box-shadow:0 4px 10px rgba(0,255,183,0.2);
-  }
-  button:hover { background: var(--primary-dark); transform:translateY(-2px); box-shadow:0 6px 15px rgba(0,255,183,0.3); }
-  button:active { transform:translateY(0); }
-
-  .result-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; padding-bottom:10px; border-bottom:1px solid rgba(255,255,255,0.1); }
-  .xp-display { background: rgba(0,255,183,0.1); padding:8px 15px; border-radius:20px; font-weight:600; color: var(--primary); }
-
-  .good { color: var(--success); font-weight:bold; background: rgba(0,255,127,0.1); padding:10px; border-radius:8px; margin:8px 0; display:flex; align-items:center; justify-content:center; gap:10px; }
-  .bad { color: var(--error); padding:15px; border-radius:8px; background: rgba(255,79,79,0.1); }
-
-  .levels-container { max-height: 250px; overflow-y:auto; margin-top:15px; }
-  .level-item { display:flex; justify-content:space-between; padding:10px 15px; margin:5px 0; background: rgba(255,255,255,0.03); border-radius:8px; transition:var(--transition); }
-  .level-item:hover { background: rgba(255,255,255,0.06); }
-  .level-info { display:flex; flex-direction:column; }
-  .level-name { font-weight:600; }
-  .level-details { font-size:0.85em; color: rgba(241,241,241,0.7); }
-  .level-hits { display:flex; align-items:center; font-weight:600; color: var(--primary); }
-  .glitch-indicator { width:10px; height:10px; border-radius:50%; background: var(--success); margin-right:8px; animation:pulse 2s infinite; }
-  @keyframes pulse { 0%{opacity:0.6;}50%{opacity:1;}100%{opacity:0.6;} }
-
-  .footer { margin-top:20px; text-align:center; color: rgba(241,241,241,0.5); font-size:0.8em; }
-
-  @media (max-width:480px){
-    body { padding:15px; }
-    h1 { font-size:1.5em; }
-    .card, .result { padding:15px; }
-  }
+:root { --primary:#00ffb7; --primary-dark:#00d5a0; --bg-dark:#0d1117; --bg-card:#151b23; --text-light:#f1f1f1; --success:#00ff7f; --error:#ff4f4f; --border-radius:12px; --transition:all 0.3s ease;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:var(--bg-dark);color:var(--text-light);display:flex;flex-direction:column;align-items:center;padding:20px;min-height:100vh;}
+.container{width:100%;max-width:700px;display:flex;flex-direction:column;align-items:center;}
+header{text-align:center;margin-bottom:25px;width:100%;}
+h1{color:var(--primary);font-size:1.8em;margin-bottom:8px;text-shadow:0 0 10px rgba(0,255,183,0.3);}
+.subtitle{color:rgba(241,241,241,0.7);font-size:0.9em;}
+.card,.result{background:var(--bg-card);border-radius:var(--border-radius);padding:20px;width:100%;margin-bottom:20px;box-shadow:0 4px 12px rgba(0,0,0,0.2);}
+.form-group{margin-bottom:15px;}
+label{display:block;margin-bottom:6px;font-weight:500;color:rgba(241,241,241,0.9);}
+input{width:100%;padding:12px 15px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background: rgba(0,0,0,0.3);color:var(--text-light);font-size:1em;transition:var(--transition);}
+input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 2px rgba(0,255,183,0.2);}
+button{margin-top:10px;padding:14px 24px;background:var(--primary);color:#000;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-size:1em;width:100%;transition:var(--transition);box-shadow:0 4px 10px rgba(0,255,183,0.2);}
+button:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 6px 15px rgba(0,255,183,0.3);}
+button:active{transform:translateY(0);}
+.accordion{background: rgba(255,255,255,0.05); border-radius:10px; margin-bottom:10px; overflow:hidden;}
+.accordion-header{cursor:pointer; padding:12px 16px; display:flex; justify-content:space-between; align-items:center; color: var(--primary); font-weight:600; background: rgba(255,255,255,0.03);}
+.accordion-header:hover{background: rgba(0,255,183,0.1);}
+.accordion-content{max-height:0; overflow:hidden; transition:max-height 0.4s ease; padding:0 16px;}
+.accordion.active .accordion-content{max-height:500px; padding:10px 16px 15px;}
+.good{color:var(--success);font-weight:bold;background:rgba(0,255,127,0.1);padding:10px;border-radius:8px;margin:8px 0;display:flex;align-items:center;justify-content:flex-start;gap:10px;flex-wrap:wrap;}
+.bad{color:var(--error);padding:15px;border-radius:8px;background: rgba(255,79,79,0.1);text-align:center;}
+.footer{margin-top:20px;text-align:center;color: rgba(241,241,241,0.5);font-size:0.8em;}
+@media(max-width:480px){body{padding:15px;} h1{font-size:1.5em;} .card,.result{padding:15px;}}
 </style>
 </head>
 <body>
 <div class="container">
-  <header>
-    <h1>🐾 Muscle Legends Glitch Level Finder (v2)</h1>
-    <p class="subtitle">Find the perfect levels for XP glitching</p>
-  </header>
+<header>
+<h1>🐾 Muscle Legends Glitch Finder</h1>
+<p class="subtitle">Bullet-Point TXT Export (First glitch levels)</p>
+</header>
 
-  <div class="card">
-    <div class="form-group">
-      <label for="rebirths">Rebirths:</label>
-      <input type="number" id="rebirths" value="8" min="0">
-    </div>
+<div class="card">
+<div class="form-group"><label>Min Rebirth:</label><input type="number" id="minRebirth" value="0" min="0"></div>
+<div class="form-group"><label>Max Rebirth:</label><input type="number" id="maxRebirth" value="2" min="0"></div>
+<button onclick="scanRange()">🔍 Scan Rebirth Range</button>
+<button id="downloadBtn" style="display:none;" onclick="downloadTxt()">⬇️ Download TXT</button>
+</div>
 
-    <div class="form-group">
-      <label for="rock">Rock Type:</label>
-      <select id="rock">
-        <option value="0.025">Tiny Rock (0.025)</option>
-        <option value="0.05">Punching Rock (0.05)</option>
-        <option value="0.075">Large Rock (0.075)</option>
-        <option value="0.2" selected>Golden Rock (0.2)</option>
-        <option value="0.375">Frozen Rock (0.375)</option>
-        <option value="0.75">Mystic Rock (0.75)</option>
-        <option value="1.125">Inferno Rock (1.125)</option>
-        <option value="2.5">Legends Rock (2.5)</option>
-        <option value="12.5">Muscle King (12.5)</option>
-        <option value="16.25">Ancient Jungle (16.25)</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="rarity">Pet Rarity:</label>
-      <select id="rarity">
-        <option value="basic">Basic</option>
-        <option value="advanced">Advanced</option>
-        <option value="rare">Rare</option>
-        <option value="epic">Epic</option>
-        <option value="unique" selected>Unique</option>
-      </select>
-    </div>
-
-    <button onclick="findGlitch()" aria-label="Find glitchable levels">Find Glitchable Levels</button>
-  </div>
-
-  <div class="result" id="output">
-    <div class="result-header">
-      <h2>Results</h2>
-      <div class="xp-display" id="xpDisplay">XP/Hit: 0</div>
-    </div>
-    <div id="resultsContent">
-      <p>Configure your settings and click "Find Glitchable Levels" to see results.</p>
-    </div>
-  </div>
-
-  <div class="footer">
-    <p>Muscle Legends Glitch Finder v2.0</p>
-  </div>
+<div class="result" id="output">
+<h2>Results</h2>
+<div id="resultsContent">
+<p>Enter min and max rebirths and click "Scan Rebirth Range".</p>
+</div>
+</div>
+<div class="footer"><p>Muscle Legends Glitch Finder v6.1</p></div>
 </div>
 
 <script>
+const rocks = {
+0.025:"Tiny Rock (0.025)",0.05:"Punching Rock (0.05)",0.075:"Large Rock (0.075)",0.2:"Golden Rock (0.2)",
+0.375:"Frozen Rock (0.375)",0.75:"Mystic Rock (0.75)",1.125:"Inferno Rock (1.125)",2.5:"Legends Rock (2.5)",
+12.5:"Muscle King (12.5)",16.25:"Ancient Jungle (16.25)"
+};
 const xpTables = {
-  basic:    [250,500,750,1000,1250,1500,1750,2000,2250,2500,2750,3000,3250,3500,3750,4000,4250,4500,4750,5000],
-  advanced: [500,1000,1500,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000,7500,8000,8500,9000,9500,10000],
-  rare:     [750,1500,2250,3000,3750,4500,5250,6000,6750,7500,8250,9000,9750,10500,11250,12000,12750,13500,14250,15000],
-  epic:     [1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000,16000,17000,18000,19000,20000],
-  unique:   Array.from({length: 20}, (_, i) => 1250*(i+1))
+basic:[250,500,750,1000,1250,1500,1750,2000,2250,2500,2750,3000,3250,3500,3750,4000,4250,4500,4750,5000],
+advanced:[500,1000,1500,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000,7500,8000,8500,9000,9500,10000],
+rare:[750,1500,2250,3000,3750,4500,5250,6000,6750,7500,8250,9000,9750,10500,11250,12000,12750,13500,14250,15000],
+epic:[1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000,16000,17000,18000,19000,20000],
+unique:Array.from({length:20},(_,i)=>1250*(i+1))
 };
 
-function findGlitch() {
-  const rebirths = parseInt(document.getElementById("rebirths").value);
-  const rockVal = parseFloat(document.getElementById("rock").value);
-  const rarity = document.getElementById("rarity").value;
-  const output = document.getElementById("resultsContent");
-  const xpDisplay = document.getElementById("xpDisplay");
+let txtData="";
 
-  // Save to localStorage
-  localStorage.setItem('mlSettings', JSON.stringify({ rebirths, rock: rockVal, rarity }));
+function scanRange(){
+const minR=parseInt(document.getElementById("minRebirth").value);
+const maxR=parseInt(document.getElementById("maxRebirth").value);
+if(isNaN(minR)||isNaN(maxR)||minR>maxR){alert("Enter valid min/max rebirth range.");return;}
+const output=document.getElementById("resultsContent");
+output.innerHTML=""; txtData=`Muscle Legends Glitch Finder v6\nRebirth Range: ${minR}-${maxR}\n\n`;
 
-  // XP gained per hit
-  const xpPerHit = (rebirths + 20) * rockVal;
-  xpDisplay.textContent = `XP/Hit: ${xpPerHit.toFixed(2)}`;
+for(let rebirth=minR;rebirth<=maxR;rebirth++){
+  const rebHeader=document.createElement("h3"); rebHeader.textContent=`Rebirth ${rebirth}`; output.appendChild(rebHeader);
+  txtData+=`- Rebirth ${rebirth}\n`;
 
-  // Cumulative XP
-  const perLevel = xpTables[rarity];
-  let totalXP = [];
-  let sum = 0;
-  for(let i=0; i<perLevel.length; i++) {
-    sum += perLevel[i];
-    totalXP.push(sum);
-  }
+  for(const [rockVal,rockName] of Object.entries(rocks)){
+    let rockHTML="",foundAny=false;
+    txtData+=`  • ${rockName}\n`;
 
-  let html = `<p><b>Checking ${rarity.toUpperCase()} pet levels:</b></p>`;
-  let glitchLevels = totalXP.map((xp, idx)=>{
-    const ratio = xp / xpPerHit;
-    if(Math.abs(ratio - Math.round(ratio)) < 1e-6) {
-      return { level: idx+1, totalXP: xp, hits: Math.round(ratio) };
+    for(const [rarity,perLevel] of Object.entries(xpTables)){
+      const xpPerHit=(rebirth+20)*parseFloat(rockVal);
+      const totalXP=perLevel.reduce((acc,v,i)=>{acc.push((acc[i-1]||0)+v);return acc;},[]);
+      const firstGlitch=totalXP.find(xp=>Math.abs(xp/xpPerHit-Math.round(xp/xpPerHit))<1e-6);
+
+      if(firstGlitch!==undefined){
+        const idx=totalXP.indexOf(firstGlitch);
+        const hits=Math.round(firstGlitch/xpPerHit);
+        foundAny=true;
+        rockHTML+=`<div class="good">${rarity.toUpperCase()} → Level ${idx+1} (${hits} hits)</div>`;
+        txtData+=`    - ${rarity.toUpperCase()}: Level ${idx+1} (${hits} hits)\n`;
+      }
     }
-    return null;
-  }).filter(Boolean);
-
-  if(glitchLevels.length){
-    html += `<div class="levels-container">`;
-    glitchLevels.forEach(item=>{
-      html += `
-        <div class="level-item">
-          <div class="level-info">
-            <span class="level-name">Level ${item.level}</span>
-            <span class="level-details">Total XP: ${item.totalXP.toLocaleString()}</span>
-          </div>
-          <div class="level-hits">
-            <span class="glitch-indicator"></span>
-            ${item.hits} hits
-          </div>
-        </div>
-      `;
-    });
-    html += `</div>`;
-  } else {
-    html += `<div class="bad">❌ No glitchable levels found for this setup.</div>`;
+    if(!foundAny){rockHTML+=`<div class="bad">No glitch found</div>`; txtData+="    - No glitch found\n";}
+    rockHTML+="\n";
+    const accDiv=document.createElement("div");
+    accDiv.className="accordion";
+    accDiv.innerHTML=`<div class="accordion-header" onclick="toggleAccordion(this)">${rockName} <span>▼</span></div>
+    <div class="accordion-content">${rockHTML}</div>`;
+    output.appendChild(accDiv);
   }
-
-  output.innerHTML = html;
+}
+document.getElementById("downloadBtn").style.display="block";
 }
 
-// Load saved settings
-window.onload = function(){
-  const saved = JSON.parse(localStorage.getItem('mlSettings'));
-  if(saved){
-    document.getElementById('rebirths').value = saved.rebirths;
-    document.getElementById('rock').value = saved.rock;
-    document.getElementById('rarity').value = saved.rarity;
-  }
-  findGlitch();
-};
+function toggleAccordion(header){const acc=header.parentElement;acc.classList.toggle("active");header.querySelector("span").textContent=acc.classList.contains("active")?"▲":"▼";}
+function downloadTxt(){const blob=new Blob([txtData],{type:"text/plain"});const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="MuscleLegends_BulletPoints.txt";link.click();}
 </script>
 </body>
 </html>
